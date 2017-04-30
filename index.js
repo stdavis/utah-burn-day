@@ -1,8 +1,14 @@
-var Alexa = require('alexa-app');
-var app = new Alexa.app('utahburnday');
+var alexa = require('alexa-app');
+var burnday = require('burnday');
+
+var app = new alexa.app('utahburnday');
 
 app.launch((req, res) => {
-    res.say('The current burn day for Salt Lake County is green (no restrictions).');
+    return burnday('Salt Lake').then((response) => {
+        res.say(`Today is a ${response.color} day in ${response.county}`);
+    }, (error) => {
+        res.say(error.message);
+    });
 });
 
-module.exports = app;
+exports.handler = app.lambda();
