@@ -5,7 +5,7 @@ var app = new alexa.app('utahburnday');
 
 app.launch((req, res) => {
     return burnday('Salt Lake').then((response) => {
-        res.say(`Today is a ${response.color} day in ${response.county}`);
+        res.say(`Today is a ${response.color} day in ${response.county} county`);
     }, (error) => {
         res.say(error.message);
     });

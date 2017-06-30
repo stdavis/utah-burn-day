@@ -23,8 +23,11 @@ var FIELDS = {
 };
 var COLORS = {
     good: 'green',
-    '??': 'yellow',
-    bad: 'red'
+    moderate: 'yellow',
+    unhealthyforsensitivegroups: 'orange',
+    unhealthy: 'red',
+    veryunhealthy: 'purple',
+    hazardous: 'brown'
 };
 
 module.exports = (csvText, date, county) => {

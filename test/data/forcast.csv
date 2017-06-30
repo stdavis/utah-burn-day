@@ -5,6 +5,6 @@ Day,County,Severity,Action,Message
 2017-04-04,slc,good,unrestricted,
 2017-04-04,bv,good,unrestricted,
 2017-04-04,utah,good,unrestricted,
-2017-04-05,slc,bad,restricted,
+2017-04-05,slc,unhealthyforsensitivegroups,restricted,
 2017-04-05,bv,good,unrestricted,
-2017-04-05,utah,good,unrestricted,
+2017-04-05,utah,moderate,unrestricted,
